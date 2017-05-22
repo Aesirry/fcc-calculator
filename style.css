@@ -23,6 +23,11 @@
 #keys {
   margin: auto;
 }
+
+#ans{
+  font-size: 3em;
+  font-weight: bold;
+}
 button {
   background-color: #EEEEEE;
   height: 100px;
