@@ -1,33 +1,8 @@
-#calculator {
-  background-color: #525252;
-  border: solid black 2px;
-  width: 400px;
-  height: 510px;
-  margin: auto;
-  margin-top: 100px;
-}
-
-#displayarea {
-  height: 100px;
-  width: 100%;
-  border: solid black 2px;
-  display: block;
-  background-color: #d5e8b9;
-}
-
-#equal{
-  color: white;
-  background-color: #E99B48;
-}
-
-#keys {
-  margin: auto;
-}
-
-#ans{
-  font-size: 3em;
+* {
+  font-size: 1.25em;
   font-weight: bold;
 }
+
 button {
   background-color: #EEEEEE;
   height: 100px;
@@ -36,5 +11,42 @@ button {
 }
 
 body {
-  background-color:orange;
+  background-color:gray;
+}
+
+#calculator {
+  width: 500px;
+  height: 510px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+#displayarea {
+  height: 100px;
+  width: 408px;
+  display: block;
+  background-color: #d5e8b9;
+}
+
+#equals{
+  background-color: #E99B48;
+}
+
+#keys {
+  margin: auto;
+  margin-top: 10px;
+}
+
+#dispAns {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+#expression {
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  margin-right: 6px;
 }
