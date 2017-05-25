@@ -75,16 +75,4 @@ $(document).ready(function(){
     $("#dispAns").html(expression);
   }); //correct
 
-  $("#ans").click(function(){
-    if(typeof ans === "undefined"){
-      ans = 0;
-      expression = "Ans = ";
-      $("#dispAns").html(ans);
-      $("#expression").html(expression);
-    }
-    else {
-      $("#dispAns").html(ans);
-    }
-  }); // ans
-
 });

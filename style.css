@@ -21,6 +21,11 @@ body {
   background-color: #008CBA;
   color: white;
 }
+
+.right-button{
+  float: right;
+}
+
 #calculator {
   width: 500px;
   height: 510px;
@@ -57,4 +62,8 @@ body {
   font-size: 1em;
   font-weight: bold;
   margin-right: 6px;
+}
+
+#equals{
+  width: 197px;
 }
