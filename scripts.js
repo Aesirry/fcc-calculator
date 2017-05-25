@@ -17,25 +17,34 @@ $(document).ready(function(){
   var keyInput;
   var ans;
 
-// check whether number key has been pressed before. if so the just pressing =
   $(".number").click(function(){
     keyInput = $(this).html();
     expression += keyInput;
     $("#dispAns").html(expression);
-  });
+  }); // number
 
   $(".operator").click(function(){
-    keyInput = $(this).html();
-    expression += keyInput;
-    $("#dispAns").html(expression);
-  });
+    // input with answer undefined
+    if (typeof ans === "undefined"){
+      keyInput = $(this).html();
+      expression += keyInput;
+      $("#dispAns").html(expression);
+    }
+
+    // input where answered is defined
+    else {
+      keyInput = ans.toString() + $(this).html();
+      expression += keyInput;
+      $("#dispAns").html(expression);
+    }
+
+  }); // operator
 
   $("#equals").click(function(){
     ans = expression.split("");
     ans = ans.filter(function(value){
       return value != "=";
     });
-
     ans = ans.join("");
     ans = eval(ans);
 
@@ -44,28 +53,27 @@ $(document).ready(function(){
       $("#expression").html(expression);
       $("#dispAns").html(ans);
       expression = "";
-      ans = 0;
+      ans = undefined;
     }
 
     else{
-      console.log(ans);
       $("#expression").html(expression);
       $("#dispAns").html(ans);
       expression = "";
     }
-  });
+  }); // equals
 
   $("#clear").click(function(){
     $("#dispAns").html("0");
     $("#expression").html("0");
     expression = "";
-    ans = 0;
-  });
+    ans = undefined;
+  }); //clear
 
   $("#correct").click(function(){
     expression = expression.slice(0, -1);
     $("#dispAns").html(expression);
-  });
+  }); //correct
 
   $("#ans").click(function(){
     if(typeof ans === "undefined"){
@@ -74,6 +82,9 @@ $(document).ready(function(){
       $("#dispAns").html(ans);
       $("#expression").html(expression);
     }
-  });
+    else {
+      $("#dispAns").html(ans);
+    }
+  }); // ans
 
 });
