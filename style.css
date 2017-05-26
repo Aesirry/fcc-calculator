@@ -26,15 +26,22 @@ body {
   float: right;
 }
 
+#all{
+  border: solid 1px;
+}
+
 #calculator {
-  width: 500px;
-  height: 510px;
+  border: solid 1px;
+  width: 410px;
+  height: 423px;
   margin: auto;
   margin-top: 100px;
+  margin-bottom: 7px;
 }
 
 #displayarea {
-  height: 100px;
+  border: solid 1px;
+  height: 90px;
   width: 408px;
   display: block;
   background-color: #d5e8b9;
@@ -46,20 +53,25 @@ body {
 }
 
 #keys {
+  border: solid 1px;
   margin: auto;
   margin-top: 10px;
 }
 
 #dispAns {
+  border: solid 1px;
   display: block;
+  width: 100%;
   font-size: 1.5em;
   font-weight: bold;
   margin-right: 6px;
 }
 
 #expression {
+  border: solid 1px;
   display: block;
-  font-size: 1em;
+  width: 100%;
+  font-size: 0.7em;
   font-weight: bold;
   margin-right: 6px;
 }
