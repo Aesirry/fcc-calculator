@@ -7,14 +7,17 @@ button {
   background-color: #EEEEEE;
   height: 57px;
   width: 94px;
-  margin-left:2px;
-  margin-top: 5px;
   border-radius: 8px;
   box-shadow: none;
 }
 
 body {
   background-color:white;
+}
+
+footer{
+  display:block;
+  font-size: 0.85em;
 }
 
 .operator{
@@ -26,12 +29,7 @@ body {
   float: right;
 }
 
-#all{
-  border: solid 1px;
-}
-
 #calculator {
-  border: solid 1px;
   width: 410px;
   height: 423px;
   margin: auto;
@@ -40,12 +38,12 @@ body {
 }
 
 #displayarea {
-  border: solid 1px;
   height: 90px;
-  width: 408px;
+  width: 398px;
   display: block;
   background-color: #d5e8b9;
   border-radius: 8px;
+  margin-left: 6px;
 }
 
 #equals{
@@ -53,27 +51,24 @@ body {
 }
 
 #keys {
-  border: solid 1px;
-  margin: auto;
-  margin-top: 10px;
+  padding-left: 5px;
+  margin-top: 20px;
 }
 
 #dispAns {
-  border: solid 1px;
   display: block;
   width: 100%;
   font-size: 1.5em;
   font-weight: bold;
-  margin-right: 6px;
+  padding-right: 6px;
 }
 
 #expression {
-  border: solid 1px;
   display: block;
   width: 100%;
   font-size: 0.7em;
   font-weight: bold;
-  margin-right: 6px;
+  padding-right: 6px;
 }
 
 #equals{
