@@ -81,7 +81,7 @@ $(document).ready(function(){
     else{
       $("#expression").html(expression);
       $("#dispAns").html(ans);
-      expression = "";
+      expression = ans.toString();
     }
   }); // equals
 
@@ -94,6 +94,7 @@ $(document).ready(function(){
 
   $("#correct").click(function(){
     // check if there is only 1 char in the input area
+    console.log(expression);
     if(expression.length == 1 || $("#dispAns").html() == "0"){
       expression = "";
       $("#dispAns").html("0");
