@@ -88,7 +88,7 @@ $(document).ready(function(){
 
   $("#correct").click(function(){
     // check if there is only 1 char in the input area
-    if(expression.length == 0){
+    if(expression.length == 1 || $("#dispAns").html() == "0"){
       expression = 0;
       $("#dispAns").html(expression);
       return;
