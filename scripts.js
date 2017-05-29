@@ -61,6 +61,12 @@ $(document).ready(function(){
   }); //clear
 
   $("#correct").click(function(){
+    // check if there is only 1 char in the input area
+    if(expression.length == 1){
+      expression = 0;
+      $("#dispAns").html(expression);
+      return;
+    }
     expression = expression.slice(0, -1);
     $("#dispAns").html(expression);
   }); //correct
