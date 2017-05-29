@@ -31,6 +31,15 @@ $(document).ready(function(){
   }); // number
 
   $(".operator").click(function(){
+    // // if the last input is an operator then don't include in expression
+    if(expression[expression.length - 1] == "%" ||
+    expression[expression.length - 1] == "+" ||
+    expression[expression.length - 1] == "/" ||
+    expression[expression.length - 1] == "*" ||
+    expression[expression.length - 1] == "-"){
+      return;
+    }
+
     // input with answer undefined
     if (typeof ans === "undefined"){
       keyInput = $(this).html();
@@ -79,7 +88,7 @@ $(document).ready(function(){
 
   $("#correct").click(function(){
     // check if there is only 1 char in the input area
-    if(expression.length == 1){
+    if(expression.length == 0){
       expression = 0;
       $("#dispAns").html(expression);
       return;
