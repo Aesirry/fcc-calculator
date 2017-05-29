@@ -5,28 +5,22 @@ $(document).ready(function(){
 
   $(".number").click(function(){
     keyInput = $(this).html();
-    console.log("KeyInput: " + keyInput);
     // checks if a dot has already been inputted
     if(keyInput == "." && expression.indexOf(".") != -1){
-      console.log("KeyInput @ if1: " + keyInput);
       return;
     }
     // if there is no input and . is the first input then also include a zero
     if(keyInput == "." && expression.length == 0){
-      console.log("KeyInput @ if2: " + keyInput);
       expression += "0" + keyInput;
       $("#dispAns").html(expression);
       return;
     }
     // check if zero is inputted again before . is inputted..
     if(keyInput == "0"){
-      console.log("KeyInput @ if3: " + keyInput);
       if(expression.indexOf(".") == -1 && expression.length == 0){
-        console.log("KeyInput @ if4: " + keyInput);
         return;
       }
       else{
-        console.log("KeyInput @ if5: " + keyInput);
         expression += keyInput;
         $("#dispAns").html(expression);
         return;
@@ -81,7 +75,7 @@ $(document).ready(function(){
     else{
       $("#expression").html(expression);
       $("#dispAns").html(ans);
-      expression = ans.toString();
+      expression = ans;
     }
   }); // equals
 
@@ -94,7 +88,12 @@ $(document).ready(function(){
 
   $("#correct").click(function(){
     // check if there is only 1 char in the input area
-    console.log(expression);
+    if(expression == ans){
+      $("#dispAns").html("0");
+      $("#expression").html("0");
+      expression = "";
+      ans = undefined;
+    }
     if(expression.length == 1 || $("#dispAns").html() == "0"){
       expression = "";
       $("#dispAns").html("0");
