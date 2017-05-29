@@ -49,7 +49,7 @@ $(document).ready(function(){
 
     // input where answered is defined
     else {
-      keyInput = ans.toString() + $(this).html();
+      keyInput = $(this).html();
       expression += keyInput;
       $("#dispAns").html(expression);
     }
