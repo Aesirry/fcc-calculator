@@ -1,7 +1,3 @@
-// zeros can be inputted more than one time if they appear after a comma
-// inputting zero or dot as first input should display 0. , not just .
-
-
 $(document).ready(function(){
   var expression = "";
   var keyInput;
@@ -21,7 +17,6 @@ $(document).ready(function(){
     }
     // check if zero is inputted again before . is inputted..
     if(keyInput == "0"){
-      // is . inputted? if yes then 0 can be inputted otherwise no.
       if(expression.indexOf(".") == -1){
         return;
       }
