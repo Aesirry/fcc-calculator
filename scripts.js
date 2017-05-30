@@ -58,7 +58,7 @@ $(document).ready(function(){
 
     // input with answer undefined
     if (typeof ans === "undefined"){
-      keyInput = $(this).html();
+      keyInput = $(this).val();
       expression += keyInput;
       $("#dispAns").html(expression);
     }
