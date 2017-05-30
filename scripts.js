@@ -5,15 +5,9 @@ $(document).ready(function(){
 
   $(".number").click(function(){
     keyInput = $(this).html();
-    // checks if a dot has already been inputted
-    // if(keyInput == "." && expression.indexOf(".") != -1){
-    //   return;
-    // }
 
     if(keyInput == "."){
       for(var i = expression.length; i >= 0; i--){
-        console.log("expression :" + expression[i]);
-        console.log("i :" + i);
         if(expression[i] == "."){
           return;
         }
