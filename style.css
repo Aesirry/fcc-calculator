@@ -47,6 +47,7 @@ footer a{
   display: block;
   background-color: #d5e8b9;
   margin-left: 5px;
+  text-overflow: clip;
 }
 
 #equals{
@@ -63,6 +64,9 @@ footer a{
   font-size: 1.5em;
   font-weight: bold;
   padding-right: 6px;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: auto;
 }
 
 #expression {
@@ -71,6 +75,9 @@ footer a{
   font-size: 0.7em;
   font-weight: bold;
   padding-right: 6px;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: auto;
 }
 
 #equals{
